@@ -5,15 +5,11 @@
     $senha = $_POST['senha'];
     
 
-    $sql = "INSERT INTO 'logins' ('usuario', 'senha') 
-            VALUES ('$usuario', '$senha')";
+    $sql = "INSERT INTO logins (usuario, senha) 
+            VALUES ('$usuario', '$senha');";
        if(mysqli_query($conexao, $sql)){
         echo "Usuário cadastrado com sucesso!";
-       }else{
-        echo "Erro".mysqli_connect_error($conexao);
        }
-       mysqli_close($conexao);
-
 
     /*$sql = "select count(*) as total from users where username = '$usuario'";
     $result = mysqli_query($conexao, $sql);
