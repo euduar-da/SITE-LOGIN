@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CADASTRO RELIZADO!</title>
+   <link rel="stylesheet" href="cadastrophp.css">
+
+</head>
+<body>
+   <div class="main-login">
+<p>Cadastro realizado com sucesso! <a href="pagina1.php">Clique aqui para realizar seu login</a></p>
+</div>
+</body>
+</html>
+
 <?php
     include("conexao.php");
 
@@ -11,7 +28,7 @@
         echo "Usuário cadastrado com sucesso!";
        }
 
-    /*$sql = "select count(*) as total from users where username = '$usuario'";
+    /*$sql = "select count(*) as total from users where username = ('$usuario')";
     $result = mysqli_query($conexao, $sql);
     $row = mysqli_fetch_assoc($result);
 
