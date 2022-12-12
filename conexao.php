@@ -17,3 +17,14 @@
    
    ?>
    
+AGORA O CÓDIGO ESTÁ ASSIM:
+<?php
+$servidor= "localhost";
+$username="root";
+$password="";
+$dbName="cadastroelogin";
+
+$conexao=mysqli_connect($servidor, $username, $password, $dbName);
+if(!$conexao){
+  die("houve um erro de conexão:" .mysqli_connect_errno());
+}
