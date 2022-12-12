@@ -66,4 +66,42 @@ include_once('config.php');
 
 ?> 
 
+AGORA O CÓDIGO ESTÁ ASSIM:
+<?php
+    session_start();
+    include("conexao.php");
+    
+    $username =$_POST['username'];
+    $password= $_POST['password'];
+     
+
+    $sql_code= "select count(*) as total from logins where username = ('username')";
+    $result = mysqli_query($conexao, $sql_code);
+    $row = mysqli_fetch_assoc($result);
+    if ($row['total'] > 0) {
+      echo "$username exists!"; }else{
+    $sql_code = "INSERT INTO logins (username, password) VALUES ('$username', '$password')";
+      if(mysqli_query($conexao, $sql_code)){
+        echo  "successful registration!";
+        }}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>successful registration!</title>
+   <link rel="stylesheet" href="cadastrophp.css">
+
+</head>
+<body>
+   <div class="main-login">
+<p><a href="pagina1.php">click here to sign up</a></p>
+</div>
+
+</body>
+</html>
+
+    
 
